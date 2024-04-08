@@ -16,7 +16,9 @@ import {
   faCirclePlus,
   faEye,
   faHouse,
+  faPeopleGroup,
   faUser,
+  faUserPlus,
 } from '@fortawesome/free-solid-svg-icons';
 import Job from '../screens/Job/Job';
 import PostJob from '../screens/PostJob/PostJob';
@@ -28,6 +30,8 @@ import ViewPostDetails from '../screens/ViewPostDetails/ViewPostDetails';
 import JobPostStatus from '../screens/JobPostStatus/JobPostStatus';
 import { TouchableOpacity } from 'react-native';
 import { DrawerActions, useNavigation } from '@react-navigation/native';
+import CreateTeam from '../screens/Team/CreateTeam/CreateTeam';
+import JoinTeam from '../screens/Team/JoinTeam/JoinTeam';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -111,6 +115,24 @@ const DrawerNavigator = ({job}) => {
         options={{
           drawerIcon: ({color, size}) => (
             <FontAwesomeIcon icon={faEye} size={size} color={color} />
+          ),
+        }}
+      />
+       <Drawer.Screen
+        name={Routes.CreateTeam}
+        component={CreateTeam}
+        options={{
+          drawerIcon: ({color, size}) => (
+            <FontAwesomeIcon icon={faPeopleGroup} size={size} color={color} />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name={Routes.JoinTeam}
+        component={JoinTeam}
+        options={{
+          drawerIcon: ({color, size}) => (
+            <FontAwesomeIcon icon={faUserPlus} size={size} color={color} />
           ),
         }}
       />

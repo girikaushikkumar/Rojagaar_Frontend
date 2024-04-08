@@ -1,8 +1,7 @@
 import axios from "axios";
-import {API_BASE_URL} from '@env';
 
 
-// const API_BASE_URL = 'http://192.168.42.244:8080/api';
+const API_BASE_URL = 'http://192.168.42.244:8080/api';
  const registerUser = async(userName, password) => {
     try {
         const response = await axios.post(`${API_BASE_URL}/user/register`, null, {

@@ -1,6 +1,5 @@
 import axios from "axios";
-import {API_BASE_URL} from '@env';
-// const API_BASE_URL = 'http://192.168.42.244:8080/api';
+const API_BASE_URL = 'http://192.168.42.244:8080/api';
 
 
 export const applyJob = async( userId,jobId,applicationDate,status) => {

@@ -1,8 +1,7 @@
 import axios from 'axios';
 import {Alert} from 'react-native';
-import {API_BASE_URL} from '@env';
 
-// const API_BASE_URL = 'http://192.168.42.244:8080/api';
+const API_BASE_URL = 'http://192.168.42.244:8080/api';
 
 const addJobToCart = async (JobId, JobSeekerId) => {
   try {
